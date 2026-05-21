@@ -11,6 +11,8 @@ body {
   background-repeat: no-repeat;
   color: #fafafaf1;
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  background-attachment: fixed;
 }
 p {
   margin: 10px;
@@ -223,4 +225,98 @@ body {
         0 0 35px rgba(255,0,0,0.5);
 
     transition: 0.3s;
+}
+
+.video-section{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.video-section video{
+    width: 700px;
+    max-width: 90%;
+    border-radius: 25px;
+    box-shadow: 0 0 30px red;
+}
+
+.gallery img:hover,
+video:hover{
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+ h1{
+    text-shadow:
+    0 0 10px red,
+    0 0 20px red,
+    0 0 40px red;
+}
+
+.hero-text{
+    backdrop-filter: blur(12px);
+}
+footer{
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+
+    color: white;
+    font-size: 18px;
+
+    background: rgba(0,0,0,0.4);
+
+    backdrop-filter: blur(5px);
+
+    border-top: 2px solid rgba(255,120,0,0.5);
+
+    box-shadow: 0 0 20px rgba(255,100,0,0.5);
+}
+
+@media (max-width: 768px){
+
+    .hero{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-text{
+        width: 90%;
+    }
+
+    .gallery{
+        width: 100%;
+        margin-top: 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery img{
+        width: 250px;
+        height: auto;
+    }
+
+    h1{
+        font-size: 55px;
+    }
+
+    p{
+        font-size: 22px;
+        line-height: 1.6;
+    }
+
+    .navigation{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    footer{
+        font-size: 16px;
+        text-align: center;
+    }
 }
